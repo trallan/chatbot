@@ -1,11 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Fuse from 'fuse.js';
-import faqData from '../data/faq.json';
+// import faqData from '../data/faq.json'; ### For local
 
 const Chat = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
+    const [faqData, setFaqData] = useState([]);
+
+    // faq.json is inside public/data/faq.json
+    useEffect(() => {
+        fetch('/data/faq.json')
+            .then(res => res.json())
+            .then(data => setFaqData(data))
+            .catch(err => console.error(err));
+        }, []);
 
     // Konfigurera Fuse.js
     const fuse = new Fuse(faqData, {

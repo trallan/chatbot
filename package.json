@@ -2,6 +2,7 @@
   "name": "chatbot",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://trallan.github.io/chatbot",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
