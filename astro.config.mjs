@@ -3,5 +3,5 @@ import react from '@astrojs/react';
 
 export default defineConfig({
     integrations: [react()],
-    site: 'https://trallan.github.io/chatbot',
+    base: '/chatbot/'
 });
