@@ -57,7 +57,7 @@ const Chat = () => {
 
     return (
         <div className="chat rounded-lg shadow-lg w-5/5 flex flex-col">
-            <div className="messages h-[60vh] lg:h-[40vh] overflow-y-auto mb-4 p-2 rounded-md">
+            <div className="messages h-[50vh] lg:h-[40vh] mb-4 p-2 rounded-md">
                 {messages.map((msg, idx) => (
                     <div key={idx} className={msg.sender === 'user' ? 'text-right' : 'text-left'}>
                         <p className="py-1 m-1 px-2 bg-gray-700 inline-block rounded-lg">
