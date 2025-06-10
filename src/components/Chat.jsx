@@ -56,31 +56,40 @@ const Chat = () => {
     };
 
     return (
-        <div className="chat">
-            <div className="messages">
-                {messages.map((msg, index) => (
-                    <div key={index} className={msg.sender}>
-                        <p>{msg.text}</p>
+        <div className="chat rounded-lg shadow-lg w-5/5 flex flex-col">
+            <div className="messages h-[60vh] lg:h-[40vh] overflow-y-auto mb-4 p-2 rounded-md">
+                {messages.map((msg, idx) => (
+                    <div key={idx} className={msg.sender === 'user' ? 'text-right' : 'text-left'}>
+                        <p className="py-1 m-1 px-2 bg-gray-700 inline-block rounded-lg">
+                            {msg.text}
+                        </p>
                     </div>
                 ))}
                 {isTyping && (
-                    <div className="bot">
-                        <p><i>Botten skriver...</i></p>
+                    <div className="text-left">
+                        <p className="py-1 px-2 bg-gray-700 inline-block rounded-lg italic opacity-75">Botten skriver...</p>
                     </div>
                 )}
             </div>
-            <div className="input-box">
+            <div className="input-box flex gap-2">
                 <input
+                    className="flex-1 p-2 border border-gray-700 rounded-md bg-gray-900 text-gray-100 placeholder-gray-500"
                     type="text"
                     value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={handleKeyDown} // Lägg till detta för att hantera Enter
                     placeholder="Skriv din fråga..."
+                    onChange={(e) => setInput(e.target.value)}
                 />
-                <button onClick={handleSend}>Skicka</button>
+                <button
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
+                    onClick={handleSend}
+                >
+                    Skicka
+                </button>
             </div>
         </div>
     );
+
+
 };
 
 export default Chat;

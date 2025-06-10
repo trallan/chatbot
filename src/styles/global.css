@@ -1,9 +1,12 @@
+@import "tailwindcss";
+
 body {
     font-family: monospace;
     background-color: #212737;
     color: #eaedf3;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 h1 {
@@ -13,7 +16,6 @@ h1 {
 }
 
 .chat {
-    max-width: 500px;
     margin: 2rem auto;
     padding: 1rem;
     border: 1px solid #eaedf3;
@@ -23,7 +25,6 @@ h1 {
 }
 
 .messages {
-    height: 300px;
     overflow-y: auto;
     margin-bottom: 1rem;
     padding: 0.5rem;

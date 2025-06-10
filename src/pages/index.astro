@@ -4,13 +4,17 @@ import "../styles/global.css";
 ---
 
 <html lang="en-gb">
-    <head>
-        <meta charset="UTF-8">
-        <title>Chattbot</title>
-    </head>
-    <body>
-        <h1>Välkommen till vår Chattbot</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chattbot</title>
+  </head>
+  <body>
+    <h1 class="text-center text-3xl font-bold text-orange-500 my-6">Välkommen till min Chattbot</h1>
+    <div class="flex justify-center">
+      <div class="w-full sm:w-11/12 md:w-10/12 lg:w-3/5 xl:w-2/5 sm:mt-8 lg:mt-16">
         <Chat client:only="react" />
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
-
