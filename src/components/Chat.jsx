@@ -6,6 +6,8 @@ const Chat = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
+
+    // TESTING USEEFFECT
     // const [faqData, setFaqData] = useState([]);
 
     // faq.json is inside public/data/faq.json
