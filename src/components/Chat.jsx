@@ -76,6 +76,7 @@ const Chat = () => {
                     className="flex-1 p-2 border border-gray-700 rounded-md bg-gray-900 text-gray-100 placeholder-gray-500"
                     type="text"
                     value={input}
+                    onKeyDown={handleKeyDown}
                     placeholder="Skriv din fråga..."
                     onChange={(e) => setInput(e.target.value)}
                 />
